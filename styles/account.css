@@ -1,0 +1,452 @@
+body{
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color:gray;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (max-width: 500px){
+  body{
+    font-size: 14px;
+  }
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  width: 100%;
+}
+  
+header{
+  background-color: rgb(63, 166, 214);
+  margin: 0px;
+  height: 110px;
+
+  position: relative;
+    
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white; 
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+header nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;    
+}
+
+.bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-style:normal;
+  font-size: 2em;
+
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.logo img{
+  width:50px;
+  height:50px;
+}
+
+a{
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+
+.link a{
+  padding: 10px 10px;
+  margin: 5px;
+
+  color: white;
+  text-decoration-line: none;
+}
+
+.link a:hover{
+  background-color: white;
+  color: rgb(63, 166, 214);
+}
+
+.menu_tendina{
+  display: none;
+}
+
+.menu_tendina div{
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+
+.impostazioni{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px;
+}
+
+#menuAperto{
+  border: 2px solid white;
+  border-radius: 0px;
+  padding: 5px;
+        
+  width: 82.4px;
+  text-transform: capitalize;
+
+  position: relative;
+  top: -4px;
+  z-index: 2;
+
+  font-size: 1em;
+  background-color: rgb(63, 166, 214);
+}
+
+
+#menuAperto a{
+  border: 0;
+  border-radius: 0;
+  
+  font-size: 1em;
+  display: block;
+  text-align: center;
+
+  color: white;
+  text-decoration-line: none;
+}
+
+#menuAperto div{
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px){
+
+  .logo{
+    font-size: 1.2em;
+  }
+ 
+  .logo img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .menu_tendina{
+    display: block;
+  }
+
+  .link{
+    display: none;
+  }
+  
+}
+  
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-size: 1.2em;
+}
+  
+section div h1{
+  margin: 20px 0 20px 0;
+
+  color: black;
+  font-size: 2.5em;
+  text-transform: capitalize;
+}
+  
+section div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  color: black;
+  margin-bottom: 20px;
+}
+
+section div table{
+  width: 60%;  
+}
+
+section div table tr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section div table th{
+  font-size: 1.8em;
+  color: teal;
+}
+  
+section div table td{
+  font-size: 1.4em;
+}
+
+section div p{
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 500px){
+  section div h1{
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  section div table th{
+    font-size: 1.3em;
+  }
+  
+  section div table td{
+    font-size: 1em;
+  }
+
+  section div table{
+    width: 80%;
+  }
+     
+}
+
+#modal-view{
+  margin: 0;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: rgba(0,0,0,0.65);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+#modal-view div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+
+  height: 50%;
+  width: 50%;
+}
+
+#modal-view form{
+  margin-bottom: 60px;
+}
+
+#modal-view form p{
+  color: black;
+  font-size: 1em;
+  margin: 0.3em;
+
+  display: block;
+}
+
+#modal-view form label{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input{
+  margin-left: 0.5em;
+}
+
+#modal-view ul{
+  font-size: 0.8em;
+  color: rgb(83, 83, 83);
+}
+
+#modal-view span{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  position: absolute;
+  bottom: 40%;
+
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+
+  z-index: 2;
+}
+
+#modal-view.hidden{
+  display: none;
+}
+
+@media (max-width: 500px){
+  
+  #modal-view div{
+    width: 90%;
+    height: 45%;
+  }
+
+  #modal-view form{
+    margin-bottom: 20px;
+  }
+}
+
+.grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.grid div{
+  background-color: #f4f4f4;
+  border: 2px solid rgb(63, 63, 63);  
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 10px;
+  margin: 0 5px 15px 5px;
+  
+}
+
+.grid table{
+  width: 100%;
+}
+
+.grid table th{
+  font-size: 1.35em;
+  text-align: start;
+}
+
+.grid div h3{
+  margin: 5px;
+  font-size: 1.4em;
+}
+
+.grid table tr{
+  display: table-row;
+}
+
+.grid div td{
+  color: gray;
+  font-size: 1.2em;
+  text-align: start;
+}
+
+.grid strong{
+  font-size: 2.2em;
+  color: gray;
+  margin: 10px;
+  text-align: center;
+  font-weight: unset;
+}
+  
+@media (max-width: 500px){
+  .grid div h3{
+    font-size: 1.3em;
+  }
+
+  .grid table th{
+    font-size: 1.2em;
+  }
+}
+
+footer{
+  background-color: grey;
+  padding:20px;
+  
+  margin-top: 10px;
+  color:white;
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+footer img{
+  width: 45px;
+  height: 45px;
+}
+  
+footer div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+  
+footer h3{
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+  
+footer p{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  font-size: 1.2em;
+}
+  
+@media (max-width:500px){
+  footer{
+    padding: 15px; 
+  }
+
+  footer h3{
+    font-size: 1.2em;
+  }
+
+  footer p{
+    font-size: 0.9em;
+    justify-content: center;
+  }
+}
+
+.hidden{
+  display: none;
+}

@@ -1,0 +1,430 @@
+body{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color:gray;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 500px) {
+    body {
+      font-size: 14px;
+    }
+}
+
+header{
+    background-image: url(../images/cover-music.jpg);
+    background-size: cover;
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header::before{
+    content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.3);
+}
+
+header nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    font-size: 1em;
+    text-transform: uppercase;
+    color: white;    
+}
+
+.logo{
+    font-style:normal;
+    font-size: 2em;
+ 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;    
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+a{
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+#menuChiuso a:hover,#menuAperto a:hover,.link a:hover{
+    background-color: white;
+    color: rgb(97, 97, 97);
+}
+
+.link a{
+    padding: 10px 10px;
+    margin:5px;
+
+    color: white;
+    text-decoration-line: none;
+}
+
+.menu_tendina{
+    display: none;
+}
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_tendina div{
+    width: 30px;
+	height: 3px;
+	background-color: white;
+	margin: 5px 0px;
+	border-radius: 10px;
+}
+
+#menu a{
+    border-radius: 0px;
+    padding: 5px;
+    font-size: 1.75em;
+}
+
+#menuAperto {
+    position: relative;
+    top: 5.5px;
+    border: 2px solid white;
+    border-radius: 0px;
+    padding: 5px;
+    
+    width: 82.4px;
+
+    text-transform: capitalize;
+}
+
+#menuAperto a{
+    border: 0;
+    border-radius: 0;
+    
+    font-size: 1em;
+    display: block;
+    text-align: center;
+
+    color: white;
+    text-decoration-line: none;
+}
+
+#menuAperto div{
+    width: 100%;
+	height: 2px;
+	background-color: white;
+	margin: 5px 0px;
+	border-radius: 10px;
+}
+
+.slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.slogan h1{
+    font-size: 2.8em;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.slogan p{
+    font-size: 1.8em;
+    font-family: 'Lato';
+    color: rgb(122, 230, 230);
+    text-align: center;
+    margin: 0px 120px 10px 120px; 
+    text-transform:initial;
+}
+
+
+@media (max-width: 500px){
+    header{
+        background-position: right;
+        height: 350px;
+    }
+
+    .logo{
+        font-size: 1.2em;
+    }
+
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu_tendina{
+        display: block;
+    }
+
+    .link{
+        display: none;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    .impostazioni{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    #menuAperto{
+        position: relative;
+        top: -4px;
+        z-index: 2;
+
+        font-size: 1em;
+        background-color: rgb(141, 141, 141);
+    }
+
+    .slogan{
+        margin: 10px;
+    }
+
+    .slogan h1{
+        font-size: 1.2em;
+        margin: 0px;
+    }
+
+    .slogan p{
+        font-size: 1em;
+        margin: 0px;
+    }
+    
+}
+
+section{
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+section div h1{
+    font-size: 2em;
+    color: rgb(68, 160, 160);
+    font-family: 'Open Sans';
+    text-transform: initial;
+    margin: 20px;
+
+    text-transform:inherit;
+    text-align: center;
+}
+
+section div p{
+    font-size: 1.25em;
+    color: gray;
+    margin: 20px;
+    
+    text-transform: inherit;
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+}
+
+article h1{
+    font-size: 1.8em;
+    color: black;
+    font-family: 'Open Sans';
+    text-transform: initial;
+    margin: 0px;
+}
+
+#view{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#view div{
+    margin: 5px;
+    border: 1px solid slategray;
+    padding: 5px;
+    max-width: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#view img{
+    max-width: 100%;
+}
+
+#view div p{
+    font-size: 0.8em;
+    margin: 10px;
+}
+
+#view div h3{
+    color: teal;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+#view p{
+    font-size: 2em;
+}
+
+#modal-view{
+    margin: 0;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+
+    background-color: rgba(0,0,0,0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+#modal-view div{
+    height: 60%;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 5%;
+}
+
+#modal-view div p{
+    margin: 5px;
+    color: black;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+#modal-view.hidden{
+    display: none;
+}
+
+@media (max-width:500px){
+
+    section div h1{
+        font-size: 1.5em;
+    }
+
+    section div p{
+        font-size: 1em;
+    }
+
+    article{
+        flex-direction: column;
+    }
+
+    article h1{
+        font-size: 1em;
+    }
+
+    form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #modal-view div{
+        height: 50%;
+        width: 70%;
+    }
+
+}
+
+footer{
+    background-color: grey;
+    padding: 10px;
+    margin-top: 100px;
+    color:white;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+footer img{
+    width: 45px;
+    height: 45px;
+}
+
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer h3{
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+footer p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.2em;
+}
+
+@media (max-width:500px){
+   footer p{
+       font-size: 0.9em;
+       justify-content: center;
+   }
+}
+
+.hidden{
+    display: none;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
